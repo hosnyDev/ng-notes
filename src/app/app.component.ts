@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,10 @@ export class AppComponent {
   title = 'ng-notes';
 
   arry = [1, 2, 3, 4, 5];
+
+  constructor(private toastr: ToastrService) {}
+
+  showSuccess() {
+    this.toastr.success('msg: Hello world!', 'Title');
+  }
 }
