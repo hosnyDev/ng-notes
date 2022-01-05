@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [AppComponent], // component should be work with this module
   imports: [
@@ -14,6 +15,7 @@ import { ToastrModule } from 'ngx-toastr';
     NgbModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    SharedModule,
   ],
   providers: [], // all services
   bootstrap: [AppComponent], // first component should be open
