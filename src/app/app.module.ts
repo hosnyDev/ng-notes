@@ -6,15 +6,9 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent], // component should be work with this module
+  imports: [BrowserModule, AppRoutingModule, NgbModule], // all module will be work with this module
+  providers: [], // all services
+  bootstrap: [AppComponent], // first component should be open
 })
-export class AppModule { }
+export class AppModule {}
