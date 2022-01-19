@@ -12,10 +12,24 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminLayoutComponent,
+    children: [
+      {
+        path: 'posts',
+        loadChildren: () =>
+          import('./views/posts/posts.module').then((m) => m.PostsModule),
+      },
+    ],
   },
   {
     path: 'user',
     component: UserLayoutComponent,
+    children: [
+      {
+        path: 'notes',
+        loadChildren: () =>
+          import('./views/notes/notes.module').then((m) => m.NotesModule),
+      },
+    ],
   },
 ];
 
