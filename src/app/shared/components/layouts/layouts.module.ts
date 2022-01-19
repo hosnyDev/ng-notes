@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
@@ -12,6 +13,6 @@ import { BlankLayoutComponent } from './blank-layout/blank-layout.component';
     AuthLayoutComponent,
     BlankLayoutComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
 })
 export class LayoutsModule {}
